@@ -1,6 +1,6 @@
 ---
 name: project-standard
-description: 项目结构规范。新建项目、初始化项目、创建新仓库时自动执行标准初始化（创建 docs/ 与 docs/日报/、AGENTS.md、CLAUDE.md、README.md）；开发过程中每天写开发日报到 docs/日报/YYYY-MM-DD.md，项目结构变化时同步更新 README。触发场景：新建项目、初始化项目、创建项目目录、写日报、开发日报。
+description: 项目结构规范。新建项目、初始化项目、创建新仓库时自动执行标准初始化（创建 docs/ 与 docs/devlog/、AGENTS.md、CLAUDE.md、README.md）；开发过程中每天写开发日报到 docs/devlog/YYYY-MM-DD.md，项目结构变化时同步更新 README。触发场景：新建项目、初始化项目、创建项目目录、写日报、开发日报、devlog、daily report。
 ---
 
 # 项目结构规范
@@ -10,7 +10,7 @@ description: 项目结构规范。新建项目、初始化项目、创建新仓�
 ## 触发时机
 
 1. 新建项目（新建目录 / 仓库准备开发）→ 执行「初始化」
-2. 每个开发日结束、或用户要求写日报 → 执行「写日报」
+2. 每个开发日结束、或用户要求写日报/devlog → 执行「写 devlog」
 3. 新增/删除目录或重要文件 → 执行「更新 README」
 
 ## 初始化
@@ -20,19 +20,20 @@ description: 项目结构规范。新建项目、初始化项目、创建新仓�
 ```
 <project>/
 ├── docs/
-│   └── 日报/          # 每日开发记录，一天一个文件
+│   └── devlog/        # 每日开发记录，一天一个文件
 ├── AGENTS.md           # 开发偏好与约束，agent 优先读取
 ├── CLAUDE.md           # 一行指向 AGENTS.md（Claude Code 兼容）
 └── README.md           # 目录结构与文件作用说明，agent 梳理项目的入口
 ```
 
-初始化完成后，写入当天第一份日报。
+初始化完成后，写入当天第一份 devlog。
 
 ## 开发过程纪律
 
-### 日报（docs/日报/YYYY-MM-DD.md）
+### Devlog（docs/devlog/YYYY-MM-DD.md）
 
-- 文件名用当天日期，如 `docs/日报/2026-09-21.md`
+- 目录名用英文 `devlog/`，文件名用当天日期，如 `docs/devlog/2026-09-21.md`
+- 内容用中文撰写（用户也会阅读），文件路径、命令、报错原文保留原样
 - 同一天多次开发：**追加到同一文件**，每次追加以 `## HH:MM` 分节
 - 内容面向 agent 复盘：改动必须带具体文件路径，决策必须写理由
 - 不确定当天日期时先问用户，不要猜
