@@ -19,6 +19,8 @@ AJohn-Skills/
 git clone https://github.com/zzyAJohn/AJohn-Skills.git ~/AJohn-Skills
 ~/AJohn-Skills/install.sh            # 装机后初始化（也用于同步更新）
 ~/AJohn-Skills/install.sh --remove   # 移除所有指向本仓库的链接
+~/AJohn-Skills/sync.sh               # 三方状态检查：本地 ↔ GitHub ↔ 安装链接
+~/AJohn-Skills/sync.sh pull          # 拉取远端更新
 ```
 
 安装后，`skills/` 下每个目录会以符号链接出现在：

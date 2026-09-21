@@ -54,7 +54,7 @@ for target in "${TARGETS[@]}"; do
     [ -d "$skill" ] || continue
     name="$(basename "$skill")"
     if is_excluded "$name" "$target"; then
-      echo "    跳过 $name（已排除）"
+      echo "    跳过 ${name}（已排除）"
       continue
     fi
     link="$target/$name"
