@@ -41,3 +41,4 @@ git clone https://github.com/zzyAJohn/AJohn-Skills.git ~/AJohn-Skills
 - 某个 skill 只想给部分工具用时，改 `install.sh` 里的 `EXCLUDES`
 - 目标目录下已存在同名真实目录时，脚本会警告并跳过，不覆盖——需手动迁移
 Co-authored 合并将解锁 Pair Extraordinaire
+Pair Extraordinaire 第二次验证（co-author 为真实账号 SilveryStar）
